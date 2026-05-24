@@ -6,6 +6,7 @@ import Team from '../components/Team'; // 1. Import your newly updated component
 import Warrant from '../components/WarranToAct'; // 1. Import your newly updated component
 import AboutUs from '../components/AboutUs';
 import { Link } from 'react-router-dom';
+import banner from '../assets/homepage_banner.png';
 
 // Standard lightweight SVG icons
 const MenuIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>;
@@ -72,68 +73,66 @@ export default function Homepage() {
     <div className="min-h-screen bg-zinc-50 text-zinc-900 flex flex-col justify-between selection:bg-emerald-800 selection:text-white">
 
 {/* HERO SECTION */}
-      <section className="relative bg-emerald-950 text-white min-h-[calc(100vh-80px)] flex items-center overflow-hidden">
-        
-        {/* BACKGROUND IMAGE LAYER */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" 
-            alt="Modern architectural background" 
-            className={`w-full h-full object-cover object-center transition-transform duration-[3000ms] ease-out opacity-20 mix-blend-luminosity ${
-              animateHero ? 'scale-105' : 'scale-100'
-            }`}
-          />
-          {/* Linear gradient overlay to make sure text contrast is perfectly readable */}
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-950 via-emerald-950/90 to-transparent"></div>
-        </div>
+<section className="relative bg-zinc-950 text-white min-h-[calc(100vh-80px)] flex items-center overflow-hidden">
+  
+  {/* BACKGROUND IMAGE LAYER */}
+  <div className="absolute inset-0 z-0 overflow-hidden">
+    <img 
+      src={banner}
+      alt="Modern architectural background" 
+      className={`w-full h-full object-cover object-center transition-transform duration-[3000ms] ease-out opacity-60 ${
+        animateHero ? 'scale-105' : 'scale-100'
+      }`}
+    />
+    
+    {/* Deep Emerald Tint Overlay (High visibility for the image, branding remains) */}
+    <div className="absolute inset-0 bg-emerald-950/40"></div>
+    
+    {/* Dark Gradient to ensure text readability */}
+    <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/95 via-zinc-950/40 to-transparent"></div>
+  </div>
 
-        {/* Subtle geometric dot pattern layout */}
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] z-0"></div>
+  {/* Content Layer */}
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 sm:py-20">
+    <div className="max-w-3xl">
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 sm:py-20">
-          <div className="max-w-3xl">
+      {/* 1. BADGE */}
+      <div className={`inline-flex items-center gap-2 px-3 py-1 bg-emerald-950/50 border border-emerald-500/30 rounded text-xs uppercase tracking-widest text-emerald-300 font-semibold mb-6 transition-all duration-700 ease-out ${
+        animateHero ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+      }`}>
+        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Professional Legal Counsel
+      </div>
 
-            {/* 1. BADGE ELEMENT */}
-            <div className={`inline-flex items-center gap-2 px-3 py-1 bg-emerald-900/50 border border-emerald-700/50 rounded text-xs uppercase tracking-widest text-emerald-300 font-semibold mb-6 transition-all duration-700 ease-out ${
-              animateHero ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-            }`}>
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Professional Legal Counsel
-            </div>
+      {/* 2. MAIN HEADLINE */}
+      <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-serif tracking-tight font-normal leading-tight text-white mb-6 transition-all duration-1000 delay-150 ease-out ${
+        animateHero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}>
+        Commanding trust. <br className="hidden sm:inline" />
+        Delivering precise legal solutions.
+      </h1>
 
-            {/* 2. MAIN HEADLINE */}
-            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-serif tracking-tight font-normal leading-tight text-white mb-6 transition-all duration-1000 delay-150 ease-out ${
-              animateHero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}>
-              Commanding trust. <br className="hidden sm:inline" />
-              Delivering precise legal solutions.
-            </h1>
+      {/* 3. PARAGRAPH */}
+      <p className={`text-zinc-100 text-base sm:text-lg lg:text-xl font-normal leading-relaxed mb-10 max-w-2xl transition-all duration-1000 delay-300 ease-out ${
+        animateHero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+      }`}>
+        At Alyshakasih, we defend your interests with uncompromised dedication. Providing sophisticated corporate, property, and dispute resolution counsel tailored to complex environments.
+      </p>
 
-            {/* 3. PARAGRAPH DESCRIPTION */}
-            <p className={`text-zinc-300 text-base sm:text-lg lg:text-xl font-normal leading-relaxed mb-10 max-w-2xl transition-all duration-1000 delay-300 ease-out ${
-              animateHero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-            }`}>
-              At Alyshakasih, we defend your interests with uncompromised dedication. Providing sophisticated corporate, property, and dispute resolution counsel tailored to complex environments.
-            </p>
+      {/* 4. CALL TO ACTION */}
+      <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-500 ease-out ${
+        animateHero ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-98 translate-y-4'
+      }`}>
+        <Link to="/contact" className="w-full sm:w-auto text-center bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-4 rounded transition-all tracking-wide shadow-lg text-sm">
+          Contact Our Counsel
+        </Link>
+        <a href="#expertise" className="w-full sm:w-auto text-center border border-emerald-500/50 text-white hover:bg-emerald-950/60 active:scale-98 font-medium px-8 py-4 rounded transition-all tracking-wide text-sm">
+          Our Practice Areas
+        </a>
+      </div>
 
-            {/* 4. CALL TO ACTION BUTTONS */}
-            <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-500 ease-out ${
-              animateHero ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-98 translate-y-4'
-            }`}>
-              {/* Uses React Router Link to go directly to your contact page path */}
-              <Link to="/contact" className="w-full sm:w-auto text-center bg-white text-emerald-950 font-semibold px-8 py-4 rounded hover:bg-zinc-100 active:scale-98 transition-all tracking-wide shadow-lg text-sm">
-                Contact Our Counsel
-              </Link>
-
-              {/* Keeps smooth scroll anchor to scroll down the homepage for Expertise */}
-              <a href="#expertise" className="w-full sm:w-auto text-center border border-emerald-700 text-emerald-200 hover:bg-emerald-900/30 active:scale-98 font-medium px-8 py-4 rounded transition-all tracking-wide text-sm">
-                Our Practice Areas
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
+    </div>
+  </div>
+</section>
 
 
       <AboutUs /> {/* Sits clean and wide right here */}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-
+import alysha from '../assets/alisha.png';
 export default function Team() {
   const [headerVisible, setHeaderVisible] = useState(false);
   const [cardVisible, setCardVisible] = useState(false);
@@ -76,22 +76,26 @@ export default function Team() {
             {/* Structural top accent line that wraps smoothly along the rounded edge */}
             <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-emerald-800 via-emerald-700 to-emerald-600 opacity-80" />
 
-            {/* Avatar Cluster Container */}
-            <div className="flex justify-center mb-8">
-              <div className="relative">
-                {/* Outer pulsing rounded focus ring */}
-                <div className="absolute inset-0 border border-emerald-800/20 rounded-full scale-110 group-hover:scale-115 group-hover:border-emerald-800/40 transition-all duration-500" />
-                
-                {/* Fully Rounded Premium Headshot Image */}
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white shadow-md relative z-10 bg-zinc-100">
-                  <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400" 
-                    alt="Tan Sri Kasih Nur Alisa binti Abdullah"
-                    className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              </div>
-            </div>
+{/* Avatar Cluster Container */}
+<div className="flex justify-center mb-8">
+  <div className="relative">
+    {/* Outer pulsing rounded focus ring */}
+    <div className="absolute inset-0 border border-emerald-800/20 rounded-full scale-110 group-hover:scale-115 group-hover:border-emerald-800/40 transition-all duration-500" />
+    
+    {/* Fully Rounded Premium Headshot Image */}
+    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white shadow-md relative z-10 bg-zinc-100 flex items-center justify-center">
+      <img 
+        src={alysha}
+        alt="Tan Sri Kasih Nur Alisa binti Abdullah"
+        /* 
+           translate-y-2: moves it down 8px 
+           scale-125: zooms in so you don't see empty space at the top
+        */
+        className="w-full h-full object-cover transform translate-y-2 scale-125 group-hover:scale-[1.3] transition-all duration-500"
+      />
+    </div>
+  </div>
+</div>
 
             {/* Counsel Typography Stack */}
             <div className="space-y-4">
