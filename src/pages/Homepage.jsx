@@ -115,7 +115,7 @@ export default function Homepage() {
       <p className={`text-zinc-100 text-base sm:text-lg lg:text-xl font-normal leading-relaxed mb-10 max-w-2xl transition-all duration-1000 delay-300 ease-out ${
         animateHero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
       }`}>
-        At Alyshakasih, we defend your interests with uncompromised dedication. Providing sophisticated corporate, property, and dispute resolution counsel tailored to complex environments.
+        At Chambers of Alysha Kasih & Partners, we defend your interests with uncompromised dedication. Providing sophisticated corporate, property, and dispute resolution counsel tailored to complex environments.
       </p>
 
       {/* 4. CALL TO ACTION */}
@@ -180,146 +180,98 @@ export default function Homepage() {
 
 
 {/* FOOTER */}
-      <footer className="bg-emerald-950 text-emerald-300/70 text-xs py-16 lg:py-24 border-t border-emerald-900/60 relative overflow-hidden">
-        {/* Subtle ambient luxury grid texture */}
-        <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+<footer className="bg-emerald-950 text-emerald-300/70 text-xs py-16 lg:py-24 border-t border-emerald-900/60 relative overflow-hidden">
+  {/* Subtle ambient luxury grid texture */}
+  <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
 
-          {/* Upper Directory Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-emerald-900/40">
+    {/* Upper Directory Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-emerald-900/40">
 
-            {/* Brand Column */}
-            <div className="md:col-span-5 space-y-4">
-              <p className="font-serif font-normal text-white tracking-[0.25em] uppercase text-base sm:text-lg">
-                Alyshakasih
-              </p>
-              <p className="text-emerald-200/60 leading-relaxed font-sans font-light max-w-sm text-xs sm:text-[13px]">
-                Chambers of Alysha Kasih &amp; Partners provides premier bespoke corporate counsel, strategic litigation support, and comprehensive risk mitigation strategies tailored for modern high-growth businesses and elite private clients.
-              </p>
+      {/* Brand Column */}
+      <div className="md:col-span-5 space-y-4">
+        <p className="font-serif font-normal text-white tracking-[0.25em] uppercase text-base sm:text-lg">
+          Alyshakasih
+        </p>
+        <p className="text-emerald-200/60 leading-relaxed font-sans font-light max-w-sm text-xs sm:text-[13px]">
+          Chambers of Alysha Kasih &amp; Partners provides premier bespoke corporate counsel, strategic litigation support, and comprehensive risk mitigation strategies tailored for modern high-growth businesses and elite private clients.
+        </p>
 
-              {/* Social Media Button Matrix */}
-              <div className="flex items-center gap-3 pt-2">
-                {/* X / Twitter */}
-                <a
-                  href="https://x.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit X Profile"
-                  className="w-9 h-9 flex items-center justify-center border border-emerald-800/60 text-emerald-300 bg-emerald-900/20 hover:bg-emerald-500 hover:text-emerald-950 hover:border-emerald-400 transition-all duration-300 rounded-lg transform hover:-translate-y-1 shadow-xs"
-                >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                  </svg>
-                </a>
-
-                {/* Instagram */}
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit Instagram Profile"
-                  className="w-9 h-9 flex items-center justify-center border border-emerald-800/60 text-emerald-300 bg-emerald-900/20 hover:bg-emerald-500 hover:text-emerald-950 hover:border-emerald-400 transition-all duration-300 rounded-lg transform hover:-translate-y-1 shadow-xs"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                </a>
-
-                {/* Facebook */}
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit Facebook Profile"
-                  className="w-9 h-9 flex items-center justify-center border border-emerald-800/60 text-emerald-300 bg-emerald-900/20 hover:bg-emerald-500 hover:text-emerald-950 hover:border-emerald-400 transition-all duration-300 rounded-lg transform hover:-translate-y-1 shadow-xs"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                  </svg>
-                </a>
-
-                {/* LinkedIn / Professional Network */}
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit LinkedIn Profile"
-                  className="w-9 h-9 flex items-center justify-center border border-emerald-800/60 text-emerald-300 bg-emerald-900/20 hover:bg-emerald-500 hover:text-emerald-950 hover:border-emerald-400 transition-all duration-300 rounded-lg transform hover:-translate-y-1 shadow-xs"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                    <rect x="2" y="9" width="4" height="12"></rect>
-                    <circle cx="4" cy="4" r="2"></circle>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            {/* Navigation Quick Links */}
-            <div className="md:col-span-3 space-y-4">
-              <p className="text-[10px] font-bold text-white tracking-[0.2em] uppercase font-sans">
-                Firm Navigation
-              </p>
-              <ul className="space-y-2.5 font-sans">
-                <li>
-                  <a href="#about" className="hover:text-emerald-400 transition-colors block">Our Practice</a>
-                </li>
-                <li>
-                  <a href="#expertise" className="hover:text-emerald-400 transition-colors block">Areas of Expertise</a>
-                </li>
-                <li>
-                  <a href="#team" className="hover:text-emerald-400 transition-colors block">Leadership Counsel</a>
-                </li>
-                <li>
-                  <a href="#warrant" className="hover:text-emerald-400 transition-colors block">Warrant to Act</a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Clean Chambers Contact Column */}
-            <div className="md:col-span-4 space-y-4 font-sans">
-              <p className="text-[10px] font-bold text-white tracking-[0.2em] uppercase">
-                Chambers Engagement
-              </p>
-              <ul className="space-y-3 font-light text-emerald-300/60 leading-relaxed">
-                <li className="flex flex-col">
-                  <span className="text-[10px] text-emerald-400 font-medium tracking-wider uppercase mb-0.5">Primary Office</span>
-                  <span>Anja Residensi, Bangi, Selangor</span>
-                </li>
-                <li className="flex flex-col">
-                  <span className="text-[10px] text-emerald-400 font-medium tracking-wider uppercase mb-0.5">Direct Briefings</span>
-                  <a href="mailto:counsel@alyshakasih.com" className="hover:text-emerald-400 transition-colors">counsel@alyshakasih.com</a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-
-{/* Bottom Legal Sub-Footer */}
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-6 pt-4 text-[11px] font-sans tracking-wide">
-            <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
-              <p>&copy; {new Date().getFullYear()} Alyshakasih. All rights reserved.</p>
-              <span className="hidden sm:inline text-emerald-900/60">|</span>
-              <p className="text-emerald-500/50 text-[10px] tracking-widest uppercase font-medium">
-                Crafted by <span className="text-emerald-400 font-semibold hover:text-yellow-400 transition-colors cursor-default">BINAIDEA</span>
-              </p>
-            </div>
-
-            <div className="flex gap-6">
-              <a href="#privacy" className="text-emerald-300/60 hover:text-white transition-colors duration-300 border-b border-transparent hover:border-white/20 pb-0.5">
-                Privacy Policy
-              </a>
-              <a href="#terms" className="text-emerald-300/60 hover:text-white transition-colors duration-300 border-b border-transparent hover:border-white/20 pb-0.5">
-                Terms of Service
-              </a>
-            </div>
-          </div>
-
+        {/* Social Media Button Matrix */}
+        <div className="flex items-center gap-3 pt-4">
+          {/* TikTok */}
+          <a href="#" className="w-9 h-9 flex items-center justify-center border border-emerald-800/60 text-emerald-300 bg-emerald-900/20 hover:bg-emerald-500 hover:text-emerald-950 transition-all duration-300 rounded-lg">
+            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.77 0 2.89 2.89 0 0 1 2.89-2.89c.39 0 .76.07 1.11.2v-3.41a6.38 6.38 0 0 0-3.35.33 6.34 6.34 0 1 0 7.39 5.86V9.16a7.17 7.17 0 0 0 3.79 1.13v-3.6z"/></svg>
+          </a>
+          {/* Instagram */}
+          <a href="#" className="w-9 h-9 flex items-center justify-center border border-emerald-800/60 text-emerald-300 bg-emerald-900/20 hover:bg-emerald-500 hover:text-emerald-950 transition-all duration-300 rounded-lg">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          {/* LinkedIn */}
+          <a href="#" className="w-9 h-9 flex items-center justify-center border border-emerald-800/60 text-emerald-300 bg-emerald-900/20 hover:bg-emerald-500 hover:text-emerald-950 transition-all duration-300 rounded-lg">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
         </div>
-      </footer>
+      </div>
+
+      {/* Navigation Quick Links */}
+      <div className="md:col-span-3 space-y-4">
+        <p className="text-[10px] font-bold text-white tracking-[0.2em] uppercase font-sans">
+          Firm Navigation
+        </p>
+        <ul className="space-y-2.5 font-sans">
+          <li><a href="#about" className="hover:text-emerald-400 transition-colors block">Our Practice</a></li>
+          <li><a href="#expertise" className="hover:text-emerald-400 transition-colors block">Areas of Expertise</a></li>
+          <li><a href="#team" className="hover:text-emerald-400 transition-colors block">Leadership Counsel</a></li>
+          <li><a href="#warrant" className="hover:text-emerald-400 transition-colors block">Warrant to Act</a></li>
+        </ul>
+      </div>
+
+      {/* Chambers Contact & Map Column */}
+      <div className="md:col-span-4 space-y-6 font-sans">
+        <p className="text-[10px] font-bold text-white tracking-[0.2em] uppercase">
+          Chambers Engagement
+        </p>
+        
+        {/* Contact Details */}
+        <div className="space-y-3 font-light text-emerald-300/60 leading-relaxed text-xs">
+          <p>15-2, Jalan 1A/114, Off, Jalan Kuchai Lama,<br />58200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
+          <p>Tel: <a href="tel:+60188887878" className="hover:text-white transition-colors">018-88887878</a></p>
+          <p>Fax: +60 8 8888 7878</p>
+          <a href="mailto:chambersalyshakasihpartners@gmail.com" className="hover:text-emerald-400 transition-colors block">chambersalyshakasihpartners@gmail.com</a>
+        </div>
+
+        {/* Embedded Google Map */}
+        <div className="w-full h-32 rounded-lg overflow-hidden border border-emerald-800/30">
+          <iframe 
+            title="Office Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.053805828461!2d101.67323927496614!3d3.0917269539316616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4a2663969197%3A0x6b4f738f7311b590!2s15-2%2C%20Jalan%201A%2F114%2C%20Off%2C%20Jalan%20Kuchai%20Lama%2C%2058200%20Kuala%20Lumpur!5e0!3m2!1sen!2smy!4v1716728000000!5m2!1sen!2smy"
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    {/* Bottom Legal Sub-Footer */}
+    <div className="flex flex-col sm:flex-row justify-between items-center gap-6 pt-4 text-[11px] font-sans tracking-wide">
+      <p>&copy; {new Date().getFullYear()} Alyshakasih. All rights reserved.</p>
+      
+      <p className="text-emerald-500/50 uppercase tracking-widest">
+        Crafted by <a href="https://binaidea.com" className="text-emerald-400 hover:text-yellow-400 transition-colors">BINAIDEA</a>
+      </p>
+
+      <div className="flex gap-6">
+        <a href="#privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#terms" className="hover:text-white transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
     </div>
   );

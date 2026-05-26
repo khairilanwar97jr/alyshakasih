@@ -1,136 +1,89 @@
 import React, { useEffect, useRef, useState } from 'react';
 import alysha from '../assets/alisha.png';
+
+const teamMembers = [
+  { name: "Tan Sri Kasih Nur Alisa binti Abdullah", role: "Founder - Consultant", cat: "Consultant", email: "kasih.alyshakasih@gmail.com", isFounder: true },
+  { name: "Alysha Yasmin binti Zulkifli", role: "Managing Partner", cat: "Partners", email: "alysha.alyshakasih@gmail.com" },
+  { name: "Sumayyah binti Suhaimi", role: "Partner", cat: "Partners", email: "sumayyah.alyshakasih@gmail.com" },
+  { name: "Nurina Izzati binti Yusri", role: "Partner", cat: "Partners", email: "nurina.alyshakasih@gmail.com" },
+  { name: "Melissa a/p Arumugam", role: "Legal Assistant", cat: "Legal Assistant", email: "melissa.alyshakasih@gmail.com" },
+  { name: "Alice Yap Tan", role: "Accounts Executive", cat: "Accounts Executive", email: "alice.alyshakasih@gmail.com" },
+  { name: "Wardah Erina binti Malik", role: "Paralegal", cat: "Paralegal", email: "wardah.alyshakasih@gmail.com" },
+  { name: "Muhammad Medina bin Kassim", role: "Chambering Student", cat: "Chambering Student", email: "medina.alyshakasih@gmail.com" },
+];
+
 export default function Team() {
-  const [headerVisible, setHeaderVisible] = useState(false);
-  const [cardVisible, setCardVisible] = useState(false);
-  
-  const headerRef = useRef(null);
-  const cardRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    const headerObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHeaderVisible(true);
-          headerObserver.unobserve(entry.target);
-        }
-      },
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
       { threshold: 0.1 }
     );
-
-    const cardObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setCardVisible(true);
-          cardObserver.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-    );
-
-    if (headerRef.current) headerObserver.observe(headerRef.current);
-    if (cardRef.current) cardObserver.observe(cardRef.current);
-
-    return () => {
-      headerObserver.disconnect();
-      cardObserver.disconnect();
-    };
+    if (containerRef.current) observer.observe(containerRef.current);
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="bg-white border-b border-zinc-200 w-full overflow-hidden relative">
-      {/* Soft geometric luxury mesh pattern to stay uniform with the theme */}
-      <div className="absolute inset-0 opacity-[0.015] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+    <section className="bg-white py-24 w-full relative overflow-hidden" ref={containerRef}>
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#064e3b_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div 
-          ref={headerRef}
-          className={`max-w-3xl mx-auto text-center mb-20 space-y-4 transform transition-all duration-1000 ease-out
-            ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-        >
-          <span className="text-xs font-bold tracking-[0.35em] uppercase text-emerald-800 block">
-            Leadership Profile
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-serif text-zinc-950 tracking-tight font-normal">
-            Our Key Counsel
-          </h2>
-          <div className="w-12 h-[1px] bg-emerald-800 mx-auto my-3"></div>
-          <p className="text-zinc-600 text-xs sm:text-sm max-w-md mx-auto leading-relaxed font-light">
-            Enlisting industry experts and vetted legal minds dedicated to delivering exceptional advisory standards.
-          </p>
+        <div className={`text-center mb-20 space-y-4 transition-all duration-1000 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+          <span className="text-xs font-bold tracking-[0.35em] uppercase text-emerald-800">Leadership Profile</span>
+          <h2 className="text-3xl sm:text-4xl font-serif text-zinc-950">Our Key Counsel</h2>
+          <div className="w-16 h-[2px] bg-emerald-800 mx-auto mt-4 rounded-full"></div>
+          <p className="text-zinc-600 text-sm max-w-sm mx-auto font-light">Enlisting industry experts dedicated to delivering exceptional standards.</p>
         </div>
 
-        {/* Team Layout Container */}
-        <div className="flex justify-center items-center">
-          
-          {/* Executive Card - Modified to animate smoothly from the right side */}
-          <div
-            ref={cardRef}
-            className={`bg-white border border-zinc-200 p-8 sm:p-12 rounded-2xl max-w-md w-full relative overflow-hidden text-center
-              transition-all duration-1000 ease-out transform-gpu
-              shadow-lg hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.18)] hover:border-emerald-800/20 hover:-translate-y-3 group
-              ${cardVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-16 scale-[0.98]'}`}
-          >
-            {/* Structural top accent line that wraps smoothly along the rounded edge */}
-            <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-emerald-800 via-emerald-700 to-emerald-600 opacity-80" />
-
-{/* Avatar Cluster Container */}
-<div className="flex justify-center mb-8">
-  <div className="relative">
-    {/* Outer pulsing rounded focus ring */}
-    <div className="absolute inset-0 border border-emerald-800/20 rounded-full scale-110 group-hover:scale-115 group-hover:border-emerald-800/40 transition-all duration-500" />
-    
-    {/* Fully Rounded Premium Headshot Image */}
-    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white shadow-md relative z-10 bg-zinc-100 flex items-center justify-center">
-      <img 
-        src={alysha}
-        alt="Tan Sri Kasih Nur Alisa binti Abdullah"
-        /* 
-           translate-y-2: moves it down 8px 
-           scale-125: zooms in so you don't see empty space at the top
-        */
-        className="w-full h-full object-cover transform translate-y-2 scale-125 group-hover:scale-[1.3] transition-all duration-500"
-      />
-    </div>
-  </div>
-</div>
-
-            {/* Counsel Typography Stack */}
-            <div className="space-y-4">
-              <div className="space-y-1.5">
-                <span className="text-[10px] font-bold tracking-[0.2em] text-emerald-800 uppercase font-sans">
-                  Consultant
-                </span>
-                <h3 className="text-xl sm:text-2xl font-serif font-normal text-zinc-900 tracking-tight leading-snug">
-                  Tan Sri Kasih Nur Alisa binti Abdullah
-                </h3>
-                <p className="text-zinc-400 font-mono text-[11px] uppercase tracking-wider pt-1">
-                  Founder - Consultant
-                </p>
+        {/* Team Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {teamMembers.map((member, i) => (
+            <div 
+              key={i}
+              className={`bg-white border border-zinc-100 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl hover:border-emerald-800/20 hover:-translate-y-2 transition-all duration-500 group
+              ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${i * 100}ms` }}
+            >
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-emerald-800 to-emerald-600" />
+              
+              <div className="flex justify-center mb-6">
+                <div className="relative">
+                  <div className="absolute inset-0 border border-emerald-800/20 rounded-full scale-110 group-hover:scale-115 transition-all" />
+                  
+                  {/* Image Container */}
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-white shadow-md relative z-10 bg-zinc-100 flex items-center justify-center">
+                    {member.isFounder ? (
+                      <img 
+                        src={alysha} 
+                        alt={member.name} 
+                        className="w-full h-full object-cover transform translate-y-2 scale-125 transition-transform duration-500" 
+                      />
+                    ) : (
+                      <svg className="w-12 h-12 text-emerald-800/30" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                      </svg>
+                    )}
+                  </div>
+                </div>
               </div>
 
-              <div className="w-8 h-[1px] bg-zinc-200 mx-auto my-2 group-hover:w-16 transition-all duration-500"></div>
-
-              {/* Secure Corporate Email Endpoint */}
-              <div className="pt-2">
-                <a 
-                  href="mailto:kasih.alyshakasih@gmail.com"
-                  className="text-xs font-mono text-zinc-600 hover:text-emerald-800 transition-colors inline-flex items-center gap-2 border-b border-transparent hover:border-emerald-800/30 pb-0.5"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3.5 h-3.5 text-emerald-800">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5A2.25 2.25 0 0 1 2.25 17.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5H4.5a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                  </svg>
-                  <span>kasih.alyshakasih@gmail.com</span>
+              <div className="space-y-3">
+                <span className="text-[9px] font-bold tracking-[0.2em] text-emerald-800 uppercase">{member.cat}</span>
+                <h3 className="text-lg font-serif text-zinc-900 leading-tight">{member.name}</h3>
+                <p className="text-zinc-500 font-mono text-[10px] uppercase tracking-wider">{member.role}</p>
+                <div className="w-8 h-[1px] bg-emerald-800/20 mx-auto" />
+                <a href={`mailto:${member.email}`} className="text-[10px] font-mono text-zinc-400 hover:text-emerald-800 transition-colors block">
+                  {member.email}
                 </a>
               </div>
             </div>
-
-          </div>
-
+          ))}
         </div>
-
       </div>
     </section>
   );
